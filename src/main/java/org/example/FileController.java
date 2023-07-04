@@ -1,6 +1,9 @@
 package org.example;
 
 import org.apache.commons.io.IOUtils;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -9,6 +12,9 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+@Configuration
+@EnableAutoConfiguration
+@ComponentScan
 @RestController
 @RequestMapping("/file")
 public class FileController {
